@@ -1,0 +1,12 @@
+{{define "content"}}
+<h2>Home Page</h2>
+<div id="content"></div>
+<button hx-get="/load" hx-target="#content">LoadPosts</button>
+<h3>Create Post</h3>
+<form>
+  <input type="text" name="title" id="title" placeholder="Title">
+  <input type="text" name="content" id="content" placeholder="Content">
+  <button hx-post="/create" hx-target="#content">create post</button>
+
+</form>
+{{end}}
